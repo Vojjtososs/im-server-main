@@ -1,0 +1,204 @@
+[10:38:07][PluginLoader][WARNING] Plugins directory not found.
+[10:38:07][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: https://gitlab.com/ap5vs/test-config/im-server-config/-/raw/main/test-config-4.yaml?ref_type=heads
+Configuration loading mode: FROM URL
+[10:38:07][NATTCore][INFO] Working directory path: C:\Users\vojta\Desktop\im-server-main
+[10:38:07][NATTCore][INFO] Start loading of the configuration file ...
+[10:38:09][NetworkIO][INFO] Yaml data has been loaded from network location (https://gitlab.com/ap5vs/test-config/im-server-config/-/raw/main/test-config-4.yaml?ref_type=heads)
+[10:38:09][NATTCore][INFO] Configuration loading done
+[10:38:09][NATTCore][INFO] Start building test structure according to the configuration ...
+[10:38:09][NATTCore][INFO] Test structure ...
+[10:38:09][NATTCore][INFO] Test structure building done
+[10:38:09][NATTCore][INFO] Start test executing ...
+[10:38:09][TestReportGenerator][INFO] Extenet reports generated. Final report will be saved to file: test_report.html
+[10:38:09][NATTCore][INFO] Starts execution on the root keyword  ...
+[10:38:09][MessageBuffer][INFO] Message buffer created for module with name: default
+[10:38:09][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar app/build/libs/app.jar 9999 10
+[10:38:09][ProcessManager][INFO] New PID (7052) added to file
+[10:38:09][WaitKw][INFO] Waiting: 3000 ms
+[10:38:09][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'IM server listening on port 9999, maximum nr. of connections=10...'
+[10:38:12][MessageBuffer][INFO] Message buffer created for module with name: client-1
+[10:38:12][TelnetClient][INFO] (client-1) Telnet client connected to host with the address: 'localhost' on port '9999'
+[10:38:12][MessageBuffer][INFO] Message buffer created for module with name: client-2
+[10:38:12][TelnetClient][INFO] (client-2) Telnet client connected to host with the address: 'localhost' on port '9999'
+[10:38:12][MessageBuffer][INFO] Message buffer created for module with name: client-3
+[10:38:12][TelnetClient][INFO] (client-3) Telnet client connected to host with the address: 'localhost' on port '9999'
+[10:38:12][WaitKw][INFO] Waiting: 2000 ms
+[10:38:12][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'Zadejte sve jmeno:'
+[10:38:12][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'Zadejte sve jmeno:'
+[10:38:12][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'Zadejte sve jmeno:'
+[10:38:14][TelnetClient][INFO] (client-1) Message send: Klient1
+[10:38:14][TelnetClient][INFO] (client-2) Message send: Klient2
+[10:38:14][TelnetClient][INFO] (client-3) Message send: Klient3
+[10:38:14][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: 'Klient2''
+[10:38:14][WaitKw][INFO] Waiting: 800 ms
+[10:38:14][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: 'Klient1''
+[10:38:14][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): 'Klient2''
+[10:38:14][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): 'Klient1''
+[10:38:14][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: 'Klient3''
+[10:38:14][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): 'Klient3''
+[10:38:14][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Nastaveno pocatecni jmeno na: Klient1'
+[10:38:14][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Nastaveno pocatecni jmeno na: Klient3'
+[10:38:14][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Nastaveno pocatecni jmeno na: Klient2'
+[10:38:15][TestSuiteKw][INFO] Test case 'Zaklaní test komunikace 1' starts executing now
+[10:38:15][TelnetClient][INFO] (client-1) Message send: Hello, world!
+[10:38:15][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: 'Hello, world!''
+[10:38:15][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: '[Klient1] >> Hello, world!'
+[10:38:15][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: '[Klient1] >> Hello, world!'
+[10:38:15][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): 'Hello, world!''
+[10:38:15][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: hello,, pocet casti: 2'
+[10:38:15][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Odeslana zprava do skupin: [Klient1] >> Hello, world!'
+[10:38:15][WaitKw][INFO] Waiting: 1000 ms
+[10:38:16][TestSuiteKw][INFO] Test suite 'Testování běžné komunikace' - Test case 'Zaklaní test komunikace 1' passed
+[10:38:16][MessageBuffer][INFO] Message buffer cleared
+[10:38:17][TestSuiteKw][INFO] Test case 'Zaklaní test komunikace 2' starts executing now
+[10:38:17][TelnetClient][INFO] (client-1) Message send: Testing 123
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: 'Testing 123''
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: '[Klient1] >> Testing 123'
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: '[Klient1] >> Testing 123'
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: '[Klient2] >> 12345 - 67890'
+[10:38:17][TelnetClient][INFO] (client-2) Message send: 12345 - 67890
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): 'Testing 123''
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: '[Klient2] >> 12345 - 67890'
+[10:38:17][TelnetClient][INFO] (client-3) Message send: This is a test message
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: testing, pocet casti: 2'
+[10:38:17][WaitKw][INFO] Waiting: 1000 ms
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: '[Klient3] >> This is a test message'
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: '[Klient3] >> This is a test message'
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Odeslana zprava do skupin: [Klient1] >> Testing 123'
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: '12345 - 67890''
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): '12345 - 67890''
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: 12345, pocet casti: 3'
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Odeslana zprava do skupin: [Klient2] >> 12345 - 67890'
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: 'This is a test message''
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): 'This is a test message''
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: this, pocet casti: 5'
+[10:38:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Odeslana zprava do skupin: [Klient3] >> This is a test message'
+[10:38:18][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: [Klient2] >> 12345 - 67890
+[10:38:18][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: [Klient3] >> This is a test message
+[10:38:18][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: [Klient1] >> Testing 123
+[10:38:18][TestSuiteKw][INFO] Test suite 'Testování běžné komunikace' - Test case 'Zaklaní test komunikace 2' passed
+[10:38:18][MessageBuffer][INFO] Message buffer cleared
+[10:38:18][TestSuiteKw][INFO] Test case 'Test odeslání soukromé zprávy' starts executing now
+[10:38:18][TelnetClient][INFO] (client-2) Message send: #sendPrivate Klient3 This is a private message
+[10:38:18][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: '#sendPrivate Klient3 This is a private message''
+[10:38:18][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): '#sendPrivate Klient3 This is a private message''
+[10:38:18][WaitKw][INFO] Waiting: 1000 ms
+[10:38:18][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: #sendprivate, pocet casti: 7'
+[10:38:18][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: '[Klient2] >> This is a private message'
+[10:38:19][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: [Klient2] >> This is a private message
+[10:38:19][NATTContext][INFO] Data has been stored in to the variable 'var-2'. Data value: 
+[10:38:19][TestSuiteKw][INFO] Test suite 'Testování běžné komunikace' - Test case 'Test odeslání soukromé zprávy' passed
+[10:38:20][MessageBuffer][INFO] Message buffer cleared
+[10:38:20][MessageBuffer][INFO] Message buffer cleared
+[10:38:20][TestSuiteKw][INFO] Test case 'Test vstoupení do diskuzní místnosti' starts executing now
+[10:38:20][TelnetClient][INFO] (client-1) Message send: #join MyGroup1
+[10:38:20][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: '#join MyGroup1''
+[10:38:20][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): '#join MyGroup1''
+[10:38:20][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: #join, pocet casti: 2'
+[10:38:20][TelnetClient][INFO] (client-2) Message send: #join MyGroup1
+[10:38:20][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: '#join MyGroup1''
+[10:38:20][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): '#join MyGroup1''
+[10:38:20][WaitKw][INFO] Waiting: 1000 ms
+[10:38:20][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: #join, pocet casti: 2'
+[10:38:21][TelnetClient][INFO] (client-1) Message send: #groups
+[10:38:21][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: '#groups''
+[10:38:21][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'public,MyGroup1'
+[10:38:21][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): '#groups''
+[10:38:21][WaitKw][INFO] Waiting: 1000 ms
+[10:38:21][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: #groups, pocet casti: 1'
+[10:38:22][TelnetClient][INFO] (client-1) Message send: #leave public
+[10:38:22][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: '#leave public''
+[10:38:22][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): '#leave public''
+[10:38:22][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: #leave, pocet casti: 2'
+[10:38:22][TelnetClient][INFO] (client-2) Message send: #leave public
+[10:38:22][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: '#leave public''
+[10:38:22][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): '#leave public''
+[10:38:22][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: #leave, pocet casti: 2'
+[10:38:22][WaitKw][INFO] Waiting: 1000 ms
+[10:38:23][TelnetClient][INFO] (client-1) Message send: #groups
+[10:38:23][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: '#groups''
+[10:38:23][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'MyGroup1'
+[10:38:23][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): '#groups''
+[10:38:23][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: #groups, pocet casti: 1'
+[10:38:23][WaitKw][INFO] Waiting: 1000 ms
+[10:38:24][TestSuiteKw][INFO] Test suite 'Testování diskuzních místností' - Test case 'Test vstoupení do diskuzní místnosti' passed
+[10:38:24][MessageBuffer][INFO] Message buffer cleared
+[10:38:25][TestSuiteKw][INFO] Test case 'Test komunikace v diskuzní místnosti' starts executing now
+[10:38:25][TelnetClient][INFO] (client-1) Message send: This is private message
+[10:38:25][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: 'This is private message''
+[10:38:25][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: '[Klient1] >> This is private message'
+[10:38:25][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): 'This is private message''
+[10:38:25][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: this, pocet casti: 4'
+[10:38:25][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Odeslana zprava do skupin: [Klient1] >> This is private message'
+[10:38:25][WaitKw][INFO] Waiting: 1000 ms
+[10:38:26][TelnetClient][INFO] (client-3) Message send: #join MyGroup1
+[10:38:26][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: '#join MyGroup1''
+[10:38:26][WaitKw][INFO] Waiting: 1000 ms
+[10:38:26][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): '#join MyGroup1''
+[10:38:26][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: #join, pocet casti: 2'
+[10:38:27][TelnetClient][INFO] (client-1) Message send: This is private message
+[10:38:27][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: 'This is private message''
+[10:38:27][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): 'This is private message''
+[10:38:27][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: '[Klient1] >> This is private message'
+[10:38:27][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: this, pocet casti: 4'
+[10:38:27][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: '[Klient1] >> This is private message'
+[10:38:27][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Odeslana zprava do skupin: [Klient1] >> This is private message'
+[10:38:27][WaitKw][INFO] Waiting: 1000 ms
+[10:38:28][TestSuiteKw][INFO] Test suite 'Testování diskuzních místností' - Test case 'Test komunikace v diskuzní místnosti' passed
+[10:38:28][MessageBuffer][INFO] Message buffer cleared
+[10:38:29][MessageBuffer][INFO] Message buffer cleared
+[10:38:29][TestSuiteKw][INFO] Test case 'Test změny jména' starts executing now
+[10:38:29][TelnetClient][INFO] (client-1) Message send: #setMyName NoveJmeno1
+[10:38:29][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: '#setMyName NoveJmeno1''
+[10:38:29][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): '#setMyName NoveJmeno1''
+[10:38:29][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: #setmyname, pocet casti: 2'
+[10:38:29][WaitKw][INFO] Waiting: 1000 ms
+[10:38:29][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Jmeno zmeneno na: NoveJmeno1'
+[10:38:30][TelnetClient][INFO] (client-1) Message send: This is new message
+[10:38:30][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: 'This is new message''
+[10:38:30][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: '[NoveJmeno1] >> This is new message'
+[10:38:30][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: '[NoveJmeno1] >> This is new message'
+[10:38:30][WaitKw][INFO] Waiting: 1000 ms
+[10:38:30][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): 'This is new message''
+[10:38:30][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: this, pocet casti: 4'
+[10:38:30][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Odeslana zprava do skupin: [NoveJmeno1] >> This is new message'
+[10:38:31][TestSuiteKw][INFO] Test suite 'Testování příkazu pro změnů jména' - Test case 'Test změny jména' passed
+[10:38:31][MessageBuffer][INFO] Message buffer cleared
+[10:38:32][TestSuiteKw][INFO] Test case 'Test změny na neunikátní jméno' starts executing now
+[10:38:32][TelnetClient][INFO] (client-1) Message send: #setMyName Klient2
+[10:38:32][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: '#setMyName Klient2''
+[10:38:32][WaitKw][INFO] Waiting: 1000 ms
+[10:38:32][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): '#setMyName Klient2''
+[10:38:32][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: #setmyname, pocet casti: 2'
+[10:38:32][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Jmeno zmeneno na: Klient2'
+[10:38:33][TelnetClient][INFO] (client-1) Message send: This is new message
+[10:38:33][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prijato od klienta: 'This is new message''
+[10:38:33][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: '[Klient2] >> This is new message'
+[10:38:33][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Po trim(): 'This is new message''
+[10:38:33][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: '[Klient2] >> This is new message'
+[10:38:33][WaitKw][INFO] Waiting: 1000 ms
+[10:38:33][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Prikaz po rozdeleni: this, pocet casti: 4'
+[10:38:33][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '[DEBUG] Odeslana zprava do skupin: [Klient2] >> This is new message'
+[10:38:34][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '[Klient2] >> This is new message' must contains expected text '[NoveJmeno1] >> This is new message')
+[10:38:34][TestSuiteKw][ERROR] Test suite 'Testování příkazu pro změnů jména' - Test case 'Test změny na neunikátní jméno' failed
+[10:38:34][MessageBuffer][INFO] Message buffer cleared
+[10:38:34][MessageBuffer][INFO] Message buffer cleared
+[10:38:34][MessageBuffer][INFO] Message buffer cleared
+[10:38:34][ExternalProgramRunner][INFO] (default) Termiting external application
+[10:38:34][ProcessManager][INFO] PID (7052) removed from file
+[10:38:34][TelnetClient][WARNING] (client-3) Connection closed
+[10:38:34][TelnetClient][WARNING] (client-2) Connection closed
+[10:38:34][TelnetClient][WARNING] (client-1) Connection closed
+[10:38:34][TelnetClient][INFO] (client-1) Telnet client [client-1] terminated
+[10:38:34][ProcessManager][INFO] PID (7052) removed from file
+[10:38:34][TelnetClient][INFO] (client-2) Telnet client [client-2] terminated
+[10:38:34][TelnetClient][INFO] (client-3) Telnet client [client-3] terminated
+[10:38:34][NATTCore][INFO] Test executing finished
+[10:38:34][NATTCore][INFO] Start generating test report
+[10:38:34][ExternalProgramRunner][WARNING] (default) External application ends with error: 1
+[10:38:35][TestReportGenerator][INFO] Report saved to file
+[10:38:35][NATTCore][WARNING] Failed test cases: "Test změny na neunikátní jméno"
+[10:38:35][NATTCore][INFO] Final score: 9,428572
+[10:38:35][NATTCore][ERROR] Testing done. Leaving status: FAILED
